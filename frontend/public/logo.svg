@@ -1,0 +1,13 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="512" height="512" rx="96" fill="#F5C238"/>
+  
+  <!-- Outer Arch Shape -->
+  <path d="M166 438V240C166 190.294 206.294 150 256 150C305.706 150 346 190.294 346 240V438H296V240C296 217.909 278.091 200 256 200C233.909 200 216 217.909 216 240V438H166Z" fill="#121212"/>
+  
+  <!-- Right Door Panel Block (Thick side) -->
+  <path d="M296 240C296 217.909 278.091 200 256 200V150C305.706 150 346 190.294 346 240V438H296V240Z" fill="#121212"/>
+  
+  <!-- Door Knob Dot -->
+  <circle cx="260" cy="295" r="16" fill="#121212"/>
+</svg>

@@ -1,194 +1,161 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
-import { Search } from "./icons";
+import { ArrowRight, Sparkles, Building2, CheckCircle2, RefreshCw, Zap } from "./icons";
 
 export function Hero() {
-  const [activeTab, setActiveTab] = useState<"overview" | "analytics">("overview");
+  const [activeTab, setActiveTab] = useState<"crm" | "scraper" | "ai">("crm");
 
   return (
-    <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden ambient-wave-bg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-        {/* Centered Main Headline */}
-        <div className="max-w-4xl mx-auto mb-6">
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-slate-900 leading-[1.08] font-sans">
-            AI-Powered Real Estate
-            <br />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900">
-              Intelligence Platform
-            </span>
+    <section className="relative pt-36 pb-24 md:pt-44 md:pb-28 overflow-hidden bg-[#111111] text-white border-b border-[#262626]">
+      {/* Background Decorative Ambient Radial Glow */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#FF5C1C]/10 rounded-full blur-3xl pointer-events-none -z-0" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          {/* Top Pill Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FDEEE6] border border-[#FF5C1C]/20 text-[#FF5C1C] text-xs font-semibold tracking-wide mb-6 shadow-xs">
+            <Sparkles size={14} className="text-[#FF5C1C]" />
+            <span>Automated Property Scraping & AI Matching</span>
+          </div>
+
+          {/* Title with Editorial Serif Font & Overlapping Orange Accent Circle behind "Intelligence" */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold tracking-tight text-white leading-[1.15] mb-6">
+            AI–Powered Real Estate <br className="hidden sm:inline" />
+            <span className="relative inline-block z-10 mx-1">
+              <span className="absolute -top-3 -left-3 w-16 h-16 md:w-20 md:h-20 bg-[#FF5C1C] rounded-full -z-10 opacity-90" aria-hidden="true" />
+              <span className="relative z-10 text-white">Intelligence</span>
+            </span> Platform
           </h1>
+
+          <p className="mt-6 text-base sm:text-lg text-slate-300 font-sans leading-relaxed font-normal max-w-2xl mx-auto">
+            Automate public property scraping, AI lead-property matching, site-visit logistics, and deal pipelines in a single unified operating system.
+          </p>
+
+          {/* Action Pill CTAs */}
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="/dashboard"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-3.5 rounded-full bg-[#FF5C1C] hover:bg-[#E04809] text-white text-sm font-semibold transition-all shadow-md hover:scale-[1.02]"
+            >
+              <span>Launch CRM</span>
+              <span className="w-6 h-6 rounded-full bg-white text-[#FF5C1C] flex items-center justify-center text-xs font-bold">
+                &rarr;
+              </span>
+            </a>
+            <a
+              href="#scraper-service"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[#1B1B1B] hover:bg-[#262626] text-white border border-[#262626] text-sm font-semibold transition-all"
+            >
+              <span>Inspect Scraper Engine</span>
+            </a>
+          </div>
+
+          <div className="mt-8 flex items-center justify-center gap-6 text-xs text-slate-400 font-sans font-medium">
+            <span className="flex items-center gap-1.5">
+              <CheckCircle2 size={14} className="text-[#FF5C1C]" />
+              Playwright Stealth Scraper
+            </span>
+            <span className="flex items-center gap-1.5">
+              <CheckCircle2 size={14} className="text-[#FF5C1C]" />
+              Prisma Database Deduplication
+            </span>
+          </div>
         </div>
 
-        {/* Subtitle */}
-        <p className="max-w-2xl mx-auto text-base sm:text-lg text-slate-600 font-normal leading-relaxed mb-8">
-          A modern real estate intelligence dashboard combining predictive analytics,
-          pipeline CRM, and automated property matching.
-        </p>
-
-        {/* Dual CTA Buttons */}
-        <div className="flex flex-wrap items-center justify-center gap-3.5 mb-16" id="hero-cta">
-          <a
-            href="#problem-solution"
-            className="px-6 py-3 rounded-full bg-white hover:bg-slate-50 text-slate-800 font-semibold text-sm border border-slate-200 shadow-sm transition-all hover:border-slate-300"
-          >
-            Live Demo
-          </a>
-          <a
-            href="#cta"
-            className="px-7 py-3 rounded-full bg-[#00A3FF] hover:bg-[#0090E0] text-white font-semibold text-sm transition-all cyan-glow hover:scale-[1.02]"
-          >
-            Start for Free
-          </a>
-        </div>
-
-        {/* MAIN EXECUTIVE DASHBOARD MOCKUP */}
-        <div className="max-w-5xl mx-auto relative rounded-3xl p-2 sm:p-3 bg-white/70 backdrop-blur-md border border-slate-200/80 shadow-[0_20px_60px_-15px_rgba(0,163,255,0.15)]">
-          <div className="rounded-2xl bg-white border border-slate-100 p-5 sm:p-7 text-left">
-            {/* Dashboard Header Bar */}
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 mb-6 border-b border-slate-100">
-              <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold text-sm">
-                  P
-                </div>
-                <div>
-                  <h2 className="text-lg font-bold text-slate-900">Executive Dashboard</h2>
-                  <p className="text-xs text-slate-500">Welcome back to PropFlow, here&apos;s what&apos;s happening today</p>
-                </div>
+        {/* Dashboard Product UI Card (Warm Editorial Theme with rounded-3xl) */}
+        <div className="max-w-5xl mx-auto mt-12 rounded-3xl bg-[#1B1B1B] border border-[#262626] shadow-2xl p-5 sm:p-7">
+          <div className="flex items-center justify-between border-b border-[#262626] pb-4 mb-6">
+            <div className="flex items-center gap-3">
+              <div className="w-9 h-9 rounded-xl bg-[#FF5C1C] text-white flex items-center justify-center font-bold text-xs">
+                PF
               </div>
-
-              <div className="flex items-center gap-2.5">
-                {/* Search Pill */}
-                <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-xs text-slate-400 w-44">
-                  <Search size={14} />
-                  <span>Search...</span>
-                </div>
-
-                {/* Tabs */}
-                <div className="flex items-center bg-slate-100 p-0.5 rounded-full text-xs font-medium text-slate-600">
-                  <button
-                    type="button"
-                    onClick={() => setActiveTab("overview")}
-                    className={`px-3 py-1 rounded-full transition-all ${
-                      activeTab === "overview" ? "bg-[#00A3FF] text-white font-semibold" : "text-slate-600"
-                    }`}
-                  >
-                    Overview
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setActiveTab("analytics")}
-                    className={`px-3 py-1 rounded-full transition-all ${
-                      activeTab === "analytics" ? "bg-[#00A3FF] text-white font-semibold" : "text-slate-600"
-                    }`}
-                  >
-                    Analytics
-                  </button>
-                </div>
-
-                {/* Profile Avatar */}
-                <div className="flex items-center gap-2 pl-2 border-l border-slate-200">
-                  <div className="relative w-8 h-8 rounded-full overflow-hidden border border-slate-200">
-                    <Image
-                      src="/images/michael.jpg"
-                      alt="User profile"
-                      fill
-                      className="object-cover"
-                      sizes="32px"
-                    />
-                  </div>
-                </div>
+              <div>
+                <h2 className="text-sm font-serif font-bold text-white">Executive Dashboard</h2>
+                <p className="text-[11px] font-sans text-slate-400">Live Scraped Inventory & AI Match Engine</p>
               </div>
             </div>
 
-            {/* Split Content: Left Metrics Grid & Right Featured Villa Asset */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-              {/* Left: 4 Metric Cards (Cols 1-5) */}
-              <div className="lg:col-span-5 grid grid-cols-2 gap-3.5">
-                <div className="p-4 rounded-2xl bg-slate-50/80 border border-slate-100 hover:border-[#00A3FF]/30 transition-all">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-medium text-slate-500">Total Revenue</span>
-                    <span className="text-[11px] font-semibold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded-md">
-                      +12%
-                    </span>
-                  </div>
-                  <div className="text-xl sm:text-2xl font-bold text-slate-900">$428,200</div>
-                </div>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => setActiveTab("crm")}
+                className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-colors ${
+                  activeTab === "crm" ? "bg-white text-[#111111]" : "bg-[#262626] text-slate-300 hover:bg-slate-800"
+                }`}
+              >
+                Pipeline CRM
+              </button>
+              <button
+                onClick={() => setActiveTab("scraper")}
+                className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-colors ${
+                  activeTab === "scraper" ? "bg-[#FF5C1C] text-white" : "bg-[#262626] text-slate-300 hover:bg-slate-800"
+                }`}
+              >
+                Scraper Telemetry
+              </button>
+            </div>
+          </div>
 
-                <div className="p-4 rounded-2xl bg-slate-50/80 border border-slate-100 hover:border-[#00A3FF]/30 transition-all">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-medium text-slate-500">Active Listing</span>
-                    <span className="text-[11px] font-semibold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded-md">
-                      +5%
-                    </span>
-                  </div>
-                  <div className="text-xl sm:text-2xl font-bold text-slate-900">213</div>
-                </div>
+          {/* Quick Metrics Tiles */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6 font-sans">
+            <div className="bg-[#111111] p-4 rounded-2xl border border-[#262626]">
+              <span className="text-[11px] font-medium text-slate-400 block mb-1">Active Pipeline</span>
+              <span className="text-xl font-serif font-bold text-white">₹14.8 Cr</span>
+              <span className="text-[10px] text-[#FF5C1C] font-semibold block mt-1">+18% this month</span>
+            </div>
+            <div className="bg-[#111111] p-4 rounded-2xl border border-[#262626]">
+              <span className="text-[11px] font-medium text-slate-400 block mb-1">Scraped Properties</span>
+              <span className="text-xl font-serif font-bold text-white">1,248</span>
+              <span className="text-[10px] text-[#FF5C1C] font-semibold block mt-1">100% Deduplicated</span>
+            </div>
+            <div className="bg-[#111111] p-4 rounded-2xl border border-[#262626]">
+              <span className="text-[11px] font-medium text-slate-400 block mb-1">Active Leads</span>
+              <span className="text-xl font-serif font-bold text-white">342</span>
+              <span className="text-[10px] text-[#FF5C1C] font-semibold block mt-1">High Intent</span>
+            </div>
+            <div className="bg-[#111111] p-4 rounded-2xl border border-[#262626]">
+              <span className="text-[11px] font-medium text-slate-400 block mb-1">Match Accuracy</span>
+              <span className="text-xl font-serif font-bold text-[#FF5C1C]">98.4%</span>
+              <span className="text-[10px] text-slate-400 font-semibold block mt-1">MatchScore™ AI</span>
+            </div>
+          </div>
 
-                <div className="p-4 rounded-2xl bg-slate-50/80 border border-slate-100 hover:border-[#00A3FF]/30 transition-all">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-medium text-slate-500">Total Leads</span>
-                    <span className="text-[11px] font-semibold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded-md">
-                      +18%
-                    </span>
-                  </div>
-                  <div className="text-xl sm:text-2xl font-bold text-slate-900">1,240</div>
-                </div>
+          {/* Feature Showcase Box */}
+          <div className="relative rounded-2xl overflow-hidden bg-[#111111] text-white p-6 sm:p-8 min-h-[260px] flex flex-col justify-between border border-[#262626]">
+            <div className="absolute top-0 right-0 w-80 h-80 bg-[#FF5C1C]/10 rounded-full blur-2xl pointer-events-none" />
 
-                <div className="p-4 rounded-2xl bg-slate-50/80 border border-slate-100 hover:border-[#00A3FF]/30 transition-all">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-medium text-slate-500">Avg. Sale</span>
-                    <span className="text-[11px] font-semibold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded-md">
-                      +8%
-                    </span>
-                  </div>
-                  <div className="text-xl sm:text-2xl font-bold text-slate-900">$1.2M</div>
-                </div>
+            <div className="relative z-10 flex items-start justify-between">
+              <div>
+                <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#FDEEE6] text-[#FF5C1C] text-[11px] font-semibold mb-3">
+                  <RefreshCw size={12} className="animate-spin text-[#FF5C1C]" />
+                  Live Syncing Scraper Engine
+                </span>
+                <h3 className="text-xl sm:text-2xl font-serif font-semibold text-white mb-2">
+                  2 BHK Luxury Apartment in Dombivli East
+                </h3>
+                <p className="text-xs text-slate-300 font-sans max-w-xl leading-relaxed">
+                  Automatically extracted via Playwright stealth scraper. Parsed carpet area (780 SqFt), 2 BHK / 2 Baths, price ₹65 Lac, and normalized amenities into PostgreSQL database.
+                </p>
               </div>
-
-              {/* Right: Featured Villa Architectural Artwork (Cols 6-12) */}
-              <div className="lg:col-span-7">
-                <div className="relative h-60 sm:h-72 w-full rounded-2xl overflow-hidden border border-slate-200 shadow-sm group">
-                  <Image
-                    src="/images/light-villa.jpg"
-                    alt="Modern Luxury Residence"
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
-                    sizes="(max-width: 768px) 100vw, 600px"
-                    priority
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
-                  
-                  {/* Floating AI Match Score Tag */}
-                  <div className="absolute top-3.5 right-3.5 px-3 py-1 rounded-full bg-white/90 backdrop-blur-md border border-white text-xs font-semibold text-slate-900 shadow-sm flex items-center gap-1.5">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                    <span>94% AI Match</span>
-                  </div>
-
-                  {/* Bottom Property Info */}
-                  <div className="absolute bottom-3.5 left-4 right-4 flex items-center justify-between text-white">
-                    <div>
-                      <h4 className="text-base font-bold drop-shadow-sm">Grand Ocean Villa</h4>
-                      <p className="text-xs text-slate-200 drop-shadow-sm">4,500 sq.ft • 5 Beds • Ready Possession</p>
-                    </div>
-                    <span className="text-base font-extrabold text-white bg-[#00A3FF] px-3 py-1 rounded-full shadow-sm">
-                      $2,450,000
-                    </span>
-                  </div>
-                </div>
-              </div>
+              <span className="px-3.5 py-1.5 rounded-full bg-[#FF5C1C] text-white font-bold text-sm shadow-md whitespace-nowrap">
+                MatchScore: 96%
+              </span>
             </div>
 
-            {/* Bottom Insights Bar */}
-            <div className="mt-6 pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-500">
-              <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#00A3FF]" />
-                <span className="font-medium text-slate-700">Market Insights:</span>
-                <span>Demand up by 24% for luxury units in Q2</span>
+            <div className="relative z-10 flex flex-wrap items-center justify-between pt-6 border-t border-[#262626] gap-4 mt-6">
+              <div className="flex items-center gap-4 text-xs text-slate-400 font-sans font-medium">
+                <span>Location: Dombivli East, Mumbai</span>
+                <span>•</span>
+                <span>Source: 99acres Portal</span>
+                <span>•</span>
+                <span>Status: Upserted & Deduplicated</span>
               </div>
-              <a href="#workflow" className="text-[#00A3FF] font-semibold flex items-center gap-1 hover:underline">
-                View Live Pipeline Workflow →
+              <a
+                href="/dashboard"
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-[#FF5C1C] hover:text-white transition-colors"
+              >
+                <span>View Full Property Intelligence</span>
+                <ArrowRight size={14} />
               </a>
             </div>
           </div>

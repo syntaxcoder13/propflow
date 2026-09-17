@@ -1,36 +1,36 @@
 import React from "react";
-import { Navbar } from "@/components/Navbar";
-import { Hero } from "@/components/Hero";
-import { ProblemSolutionSection } from "@/components/ProblemSolutionSection";
-import { AIIntelligenceSection } from "@/components/AIIntelligenceSection";
-import { WorkflowSection } from "@/components/WorkflowSection";
-import { FinalCTASection } from "@/components/FinalCTASection";
-import { Footer } from "@/components/Footer";
+import { Navbar } from "../components/Navbar";
+import { Hero } from "../components/Hero";
+import { ProblemSolutionSection } from "../components/ProblemSolutionSection";
+import { AIIntelligenceSection } from "../components/AIIntelligenceSection";
+import { WorkflowSection } from "../components/WorkflowSection";
+import { FinalCTASection } from "../components/FinalCTASection";
+import { Footer } from "../components/Footer";
 
-export default function HomePage() {
+export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-[#FAFBFC] text-[#0F172A]">
+    <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-[#111111] font-sans selection:bg-[#FF5C1C] selection:text-white">
       {/* 1. Header Navigation */}
       <Navbar />
 
       <main className="flex-1">
-        {/* 01. Hero Section */}
+        {/* 2. Hero Section */}
         <Hero />
 
-        {/* 02. Problem → Solution */}
+        {/* 3. Problem vs Solution Section */}
         <ProblemSolutionSection />
 
-        {/* 03. AI Intelligence */}
+        {/* 4. AI Intelligence Section */}
         <AIIntelligenceSection />
 
-        {/* 04. CRM Workflow */}
+        {/* 5. Workflow Section */}
         <WorkflowSection />
 
-        {/* 05. Final CTA */}
+        {/* 6. Final Lead Capture CTA Block */}
         <FinalCTASection />
       </main>
 
-      {/* Footer */}
+      {/* 7. Footer */}
       <Footer />
     </div>
   );

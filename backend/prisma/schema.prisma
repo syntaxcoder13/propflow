@@ -1,0 +1,66 @@
+// Prisma Schema for PropFlow Backend & Real Estate Scraper
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum PropertyType {
+  APARTMENT
+  VILLA
+  PENTHOUSE
+  PLOT
+  COMMERCIAL
+}
+
+enum ListingType {
+  SALE
+  RENT
+}
+
+enum FurnishingStatus {
+  UNFURNISHED
+  SEMI_FURNISHED
+  FURNISHED
+}
+
+model Property {
+  id               String            @id @default(uuid())
+  externalId       String            @unique
+  sourcePortal     String            @default("UNKNOWN")
+  sourceUrl        String            @unique
+  title            String
+  description      String?
+  propertyType     PropertyType
+  listingType      ListingType
+  price            Float
+  currency         String            @default("INR")
+  carpetAreaSqFt   Float
+  bedrooms         Int
+  bathrooms        Int
+  furnishingStatus FurnishingStatus?
+  
+  // Location details
+  address          String
+  locality         String
+  city             String
+  latitude         Float?
+  longitude        Float?
+
+  // Media and Attributes
+  amenities        String[]
+  images           String[]
+
+  // Timestamps
+  scrapedAt        DateTime          @default(now())
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+
+  @@index([locality, city])
+  @@index([price, bedrooms])
+  @@map("properties")
+}
