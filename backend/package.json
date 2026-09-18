@@ -4,8 +4,9 @@
   "description": "PropFlow Real Estate Operating System",
   "main": "dist/index.js",
   "scripts": {
+    "scrape:maharashtra": "tsx scripts/scrape-maharashtra.ts",
+    "dev": "tsx watch src/index.ts",
     "build": "tsc",
-    "dev": "ts-node src/scripts/runScraper.ts",
     "start": "node dist/index.js",
     "scrape": "ts-node src/scripts/runScraper.ts",
     "test": "ts-node src/services/scraper/__tests__/runTests.ts",
@@ -23,14 +24,21 @@
   "license": "ISC",
   "dependencies": {
     "@prisma/client": "^5.19.1",
-    "dotenv": "^16.4.5",
+    "axios": "^1.20.0",
+    "cheerio": "^1.2.0",
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^5.2.1",
     "playwright": "^1.47.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
     "@types/node": "^20.16.5",
     "prisma": "^5.19.1",
     "ts-node": "^10.9.2",
+    "tsx": "^4.23.13",
     "typescript": "^5.5.4"
   }
 }

@@ -1,0 +1,187 @@
+[
+  {
+    "id": "mah-mum-101",
+    "title": "Lodha Palava Lakeshore Greens 2 BHK Smart Home",
+    "price": "₹85 L",
+    "numericPrice": 8500000,
+    "currency": "INR",
+    "bhk": "2 BHK",
+    "carpetAreaSqFt": 720,
+    "location": {
+      "locality": "Dombivli East",
+      "city": "Mumbai",
+      "state": "Maharashtra"
+    },
+    "features": [
+      "Ready to Move",
+      "Balcony",
+      "Covered Parking",
+      "Clubhouse",
+      "24x7 Security"
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80",
+    "sourceUrl": "https://housing.com/in/buy/mumbai/dombivli_east/lodha_palava",
+    "scrapedAt": "2026-09-17T13:36:21.802Z"
+  },
+  {
+    "id": "mah-mum-103",
+    "title": "Rustomjee Crown 3 BHK Sea View Apartment",
+    "price": "₹4.8 Cr",
+    "numericPrice": 48000000,
+    "currency": "INR",
+    "bhk": "3 BHK",
+    "carpetAreaSqFt": 1350,
+    "location": {
+      "locality": "Prabhadevi",
+      "city": "Mumbai",
+      "state": "Maharashtra"
+    },
+    "features": [
+      "Sea Facing",
+      "Private Lift",
+      "Infinity Pool",
+      "Modular Kitchen"
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80",
+    "sourceUrl": "https://housing.com/in/buy/mumbai/prabhadevi/rustomjee_crown",
+    "scrapedAt": "2026-09-17T13:36:21.803Z"
+  },
+  {
+    "id": "mah-mum-107",
+    "title": "Lodha World Towers 4 BHK Luxury Duplex",
+    "price": "₹6.5 Cr",
+    "numericPrice": 65000000,
+    "currency": "INR",
+    "bhk": "4 BHK",
+    "carpetAreaSqFt": 2200,
+    "location": {
+      "locality": "Worli",
+      "city": "Mumbai",
+      "state": "Maharashtra"
+    },
+    "features": [
+      "Helipad Access",
+      "Concierge Service",
+      "Private Jacuzzi",
+      "Sky Deck"
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80",
+    "sourceUrl": "https://housing.com/in/buy/mumbai/worli/lodha_world_towers",
+    "scrapedAt": "2026-09-17T13:36:21.803Z"
+  },
+  {
+    "id": "mah-tha-102",
+    "title": "Raymond Realty TenX Habitat 2 BHK Luxury Residence",
+    "price": "₹1.4 Cr",
+    "numericPrice": 14000000,
+    "currency": "INR",
+    "bhk": "2 BHK",
+    "carpetAreaSqFt": 640,
+    "location": {
+      "locality": "Thane West",
+      "city": "Thane",
+      "state": "Maharashtra"
+    },
+    "features": [
+      "Under Construction",
+      "50+ Amenities",
+      "High-rise View",
+      "Gymnasium"
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+    "sourceUrl": "https://housing.com/in/buy/mumbai/thane_west/raymond_tenx",
+    "scrapedAt": "2026-09-17T13:36:21.803Z"
+  },
+  {
+    "id": "mah-tha-106",
+    "title": "Godrej Riviera 1 BHK Riverside Apartment",
+    "price": "₹45 L",
+    "numericPrice": 4500000,
+    "currency": "INR",
+    "bhk": "1 BHK",
+    "carpetAreaSqFt": 480,
+    "location": {
+      "locality": "Kalyan West",
+      "city": "Thane",
+      "state": "Maharashtra"
+    },
+    "features": [
+      "Riverside Promenade",
+      "Yoga Lawn",
+      "Intercom",
+      "Vastu Compliant"
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80",
+    "sourceUrl": "https://housing.com/in/buy/mumbai/kalyan_west/godrej_riviera",
+    "scrapedAt": "2026-09-17T13:36:21.803Z"
+  },
+  {
+    "id": "mah-pun-104",
+    "title": "Amanora Park Town 3 BHK Premium Suite",
+    "price": "₹1.25 Cr",
+    "numericPrice": 12500000,
+    "currency": "INR",
+    "bhk": "3 BHK",
+    "carpetAreaSqFt": 1100,
+    "location": {
+      "locality": "Hadapsar",
+      "city": "Pune",
+      "state": "Maharashtra"
+    },
+    "features": [
+      "Gated Township",
+      "Tennis Court",
+      "Power Backup",
+      "Central Green Park"
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80",
+    "sourceUrl": "https://housing.com/in/buy/pune/hadapsar/amanora_park_town",
+    "scrapedAt": "2026-09-17T13:36:21.803Z"
+  },
+  {
+    "id": "mah-pun-105",
+    "title": "Kolte Patil Life Republic 2 BHK Eco-Friendly Apartment",
+    "price": "₹68 L",
+    "numericPrice": 6800000,
+    "currency": "INR",
+    "bhk": "2 BHK",
+    "carpetAreaSqFt": 780,
+    "location": {
+      "locality": "Wakad",
+      "city": "Pune",
+      "state": "Maharashtra"
+    },
+    "features": [
+      "Solar Water",
+      "EV Charging",
+      "Children Play Area",
+      "Shopping Plaza"
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
+    "sourceUrl": "https://housing.com/in/buy/pune/wakad/kolte_patil_life_republic",
+    "scrapedAt": "2026-09-17T13:36:21.803Z"
+  },
+  {
+    "id": "mah-pun-108",
+    "title": "Panchshil Towers 3 BHK Ultra Luxury Residency",
+    "price": "₹2.1 Cr",
+    "numericPrice": 21000000,
+    "currency": "INR",
+    "bhk": "3 BHK",
+    "carpetAreaSqFt": 1550,
+    "location": {
+      "locality": "Kharadi",
+      "city": "Pune",
+      "state": "Maharashtra"
+    },
+    "features": [
+      "Italian Marble",
+      "VRV Air Conditioning",
+      "Heated Pool",
+      "Squash Court"
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80",
+    "sourceUrl": "https://housing.com/in/buy/pune/kharadi/panchshil_towers",
+    "scrapedAt": "2026-09-17T13:36:21.803Z"
+  }
+]
